@@ -162,6 +162,13 @@ app.post("/groups", async (req, res) => {
 })
 
 /**
+ * HTTP → Health Check
+ */
+app.get("/health", async (req, res) => {
+  res.json({ status: "ok" })
+})
+
+/**
  * Start the Express server
  */
 app.listen(PORT, () => {

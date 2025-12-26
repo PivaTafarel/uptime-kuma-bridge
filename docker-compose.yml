@@ -1,0 +1,14 @@
+services:
+  uptime-kuma-abridge:
+    build: .
+    container_name: uptime-kuma-abridge
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - uptime-kuma-abridge-network
+
+networks:
+  uptime-kuma-abridge-network:
+    external: true
